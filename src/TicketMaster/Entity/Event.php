@@ -46,11 +46,35 @@ class Event
      * @var Classification[]
      */
     protected $classifications;
+
+    /**
+     * @var \DateTime
+     */
     protected $dates;
+
+    /**
+     * @var bool
+     */
     protected $test;
+
+    /**
+     * @var Sale
+     */
     protected $sales;
+
+    /**
+     * @var string
+     */
     protected $groupId;
+
+    /**
+     * @var string
+     */
     protected $info;
+
+    /**
+     * @var string
+     */
     protected $pleaseNote;
 
     /**
@@ -121,7 +145,7 @@ class Event
     /**
      * @return string
      */
-    public function getLocale()
+    public function getLocale(): string
     {
         return $this->locale;
     }
@@ -130,7 +154,7 @@ class Event
      * @param string $locale
      * @return Event
      */
-    public function setLocale($locale)
+    public function setLocale(string $locale)
     {
         $this->locale = $locale;
         return $this;
@@ -139,7 +163,7 @@ class Event
     /**
      * @return string
      */
-    public function getUrl()
+    public function getUrl(): string
     {
         return $this->url;
     }
@@ -148,7 +172,7 @@ class Event
      * @param string $url
      * @return Event
      */
-    public function setUrl($url)
+    public function setUrl(string $url)
     {
         $this->url = $url;
         return $this;
@@ -157,7 +181,7 @@ class Event
     /**
      * @return Promoter
      */
-    public function getPromoter()
+    public function getPromoter(): Promoter
     {
         return $this->promoter;
     }
@@ -166,16 +190,16 @@ class Event
      * @param Promoter $promoter
      * @return Event
      */
-    public function setPromoter($promoter)
+    public function setPromoter(Promoter $promoter)
     {
         $this->promoter = $promoter;
         return $this;
     }
 
     /**
-     * @return Image
+     * @return Image[]
      */
-    public function getImages()
+    public function getImages(): array
     {
         return $this->images;
     }
@@ -205,6 +229,114 @@ class Event
     public function setClassifications(array $classifications)
     {
         $this->classifications = $classifications;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDates(): \DateTime
+    {
+        return $this->dates;
+    }
+
+    /**
+     * @param \DateTime $dates
+     * @return Event
+     */
+    public function setDates(\DateTime $dates)
+    {
+        $this->dates = $dates;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isTest(): bool
+    {
+        return $this->test;
+    }
+
+    /**
+     * @param boolean $test
+     * @return Event
+     */
+    public function setTest(bool $test)
+    {
+        $this->test = $test;
+        return $this;
+    }
+
+    /**
+     * @return Sale
+     */
+    public function getSales(): Sale
+    {
+        return $this->sales;
+    }
+
+    /**
+     * @param Sale $sales
+     * @return Event
+     */
+    public function setSales(Sale $sales)
+    {
+        $this->sales = $sales;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGroupId(): string
+    {
+        return $this->groupId;
+    }
+
+    /**
+     * @param string $groupId
+     * @return Event
+     */
+    public function setGroupId(string $groupId)
+    {
+        $this->groupId = $groupId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInfo(): string
+    {
+        return $this->info;
+    }
+
+    /**
+     * @param string $info
+     * @return Event
+     */
+    public function setInfo(string $info)
+    {
+        $this->info = $info;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPleaseNote(): string
+    {
+        return $this->pleaseNote;
+    }
+
+    /**
+     * @param string $pleaseNote
+     * @return Event
+     */
+    public function setPleaseNote(string $pleaseNote)
+    {
+        $this->pleaseNote = $pleaseNote;
         return $this;
     }
 
