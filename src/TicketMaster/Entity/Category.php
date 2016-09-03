@@ -36,7 +36,7 @@ class Category
      * @param string $id
      * @return Category
      */
-    public function setId(string $id)
+    public function setId(string $id): Category
     {
         $this->id = $id;
         return $this;
@@ -54,7 +54,7 @@ class Category
      * @param string $name
      * @return Category
      */
-    public function setName(string $name)
+    public function setName(string $name): Category
     {
         $this->name = $name;
         return $this;
@@ -72,7 +72,7 @@ class Category
      * @param string $locale
      * @return Category
      */
-    public function setLocale(string $locale)
+    public function setLocale(string $locale): Category
     {
         $this->locale = $locale;
         return $this;
@@ -90,7 +90,7 @@ class Category
      * @param int $level
      * @return Category
      */
-    public function setLevel(int $level)
+    public function setLevel(int $level): Category
     {
         $this->level = $level;
         return $this;
