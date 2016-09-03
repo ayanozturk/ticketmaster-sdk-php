@@ -104,7 +104,7 @@ class Event
      * @param string $id
      * @return Event
      */
-    public function setId(string $id)
+    public function setId(string $id): Event
     {
         $this->id = $id;
         return $this;
@@ -120,10 +120,12 @@ class Event
 
     /**
      * @param string $name
+     * @return Event
      */
-    public function setName(string $name)
+    public function setName(string $name): Event
     {
         $this->name = $name;
+        return $this;
     }
 
     /**
@@ -136,10 +138,12 @@ class Event
 
     /**
      * @param string $description
+     * @return Event
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description): Event
     {
         $this->description = $description;
+        return $this;
     }
 
     /**
@@ -154,7 +158,7 @@ class Event
      * @param string $locale
      * @return Event
      */
-    public function setLocale(string $locale)
+    public function setLocale(string $locale): Event
     {
         $this->locale = $locale;
         return $this;
@@ -172,7 +176,7 @@ class Event
      * @param string $url
      * @return Event
      */
-    public function setUrl(string $url)
+    public function setUrl(string $url): Event
     {
         $this->url = $url;
         return $this;
@@ -190,7 +194,7 @@ class Event
      * @param Promoter $promoter
      * @return Event
      */
-    public function setPromoter(Promoter $promoter)
+    public function setPromoter(Promoter $promoter): Event
     {
         $this->promoter = $promoter;
         return $this;
@@ -208,7 +212,7 @@ class Event
      * @param Image[] $images
      * @return Event
      */
-    public function setImages($images)
+    public function setImages($images): Event
     {
         $this->images = $images;
         return $this;
@@ -226,7 +230,7 @@ class Event
      * @param Classification[] $classifications
      * @return Event
      */
-    public function setClassifications(array $classifications)
+    public function setClassifications(array $classifications): Event
     {
         $this->classifications = $classifications;
         return $this;
@@ -244,7 +248,7 @@ class Event
      * @param \DateTime $dates
      * @return Event
      */
-    public function setDates(\DateTime $dates)
+    public function setDates(\DateTime $dates): Event
     {
         $this->dates = $dates;
         return $this;
@@ -262,7 +266,7 @@ class Event
      * @param boolean $test
      * @return Event
      */
-    public function setTest(bool $test)
+    public function setTest(bool $test): Event
     {
         $this->test = $test;
         return $this;
@@ -280,7 +284,7 @@ class Event
      * @param Sale $sales
      * @return Event
      */
-    public function setSales(Sale $sales)
+    public function setSales(Sale $sales): Event
     {
         $this->sales = $sales;
         return $this;
@@ -298,7 +302,7 @@ class Event
      * @param string $groupId
      * @return Event
      */
-    public function setGroupId(string $groupId)
+    public function setGroupId(string $groupId): Event
     {
         $this->groupId = $groupId;
         return $this;
@@ -316,7 +320,7 @@ class Event
      * @param string $info
      * @return Event
      */
-    public function setInfo(string $info)
+    public function setInfo(string $info): Event
     {
         $this->info = $info;
         return $this;
@@ -334,7 +338,7 @@ class Event
      * @param string $pleaseNote
      * @return Event
      */
-    public function setPleaseNote(string $pleaseNote)
+    public function setPleaseNote(string $pleaseNote): Event
     {
         $this->pleaseNote = $pleaseNote;
         return $this;
@@ -350,9 +354,9 @@ class Event
 
     /**
      * @param Category[] $categories
-     * @return $this
+     * @return Event
      */
-    public function setCategories(array $categories)
+    public function setCategories(array $categories): Event
     {
         $this->categories = $categories;
         return $this;
@@ -368,9 +372,9 @@ class Event
 
     /**
      * @param Venue[] $venues
-     * @return $this
+     * @return Event
      */
-    public function setVenues(array $venues)
+    public function setVenues(array $venues): Event
     {
         $this->venues = $venues;
         return $this;
@@ -386,9 +390,9 @@ class Event
 
     /**
      * @param Attraction[] $attractions
-     * @return $this
+     * @return Event
      */
-    public function setAttractions(array $attractions)
+    public function setAttractions(array $attractions): Event
     {
         $this->attractions = $attractions;
         return $this;

@@ -10,35 +10,27 @@ abstract class AbstractApi
     /**
      * @var string
      */
-    protected $key = 'YOUR-API-KEY';
+    private static $key = 'YOUR-API-KEY';
 
     /**
      * @var string
      */
-    protected $url = 'https://app.ticketmaster.com/';
-    
-    /**
-     * @return string
-     */
-    public function getKey(): string
-    {
-        return $this->key;
-    }
+    private static $url = 'https://app.ticketmaster.com/';
 
     /**
      * @param string $key
      */
     public function setKey(string $key)
     {
-        $this->key = $key;
+        self::$key = $key;
     }
 
     /**
      * @return string
      */
-    public function getUrl(): string
+    public static function getKey(): string
     {
-        return $this->url;
+        return self::$key;
     }
 
     /**
@@ -46,7 +38,15 @@ abstract class AbstractApi
      */
     public function setUrl(string $url)
     {
-        $this->url = $url;
+        self::$url = $url;
+    }
+
+    /**
+     * @return string
+     */
+    public static function getUrl(): string
+    {
+        return self::$url;
     }
 
 }
