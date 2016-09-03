@@ -3,6 +3,8 @@ namespace TicketMaster\Api;
 
 use GuzzleHttp\Client;
 
+\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader('class_exists');
+
 /**
  * Class AbstractApi
  * @package TicketMaster\Api
