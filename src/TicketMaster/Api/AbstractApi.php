@@ -3,8 +3,6 @@ namespace TicketMaster\Api;
 
 use GuzzleHttp\Client;
 
-\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader('class_exists');
-
 /**
  * Class AbstractApi
  * @package TicketMaster\Api
@@ -25,6 +23,8 @@ abstract class AbstractApi
 
     public function __construct()
     {
+        \Doctrine\Common\Annotations\AnnotationRegistry::registerLoader('class_exists');
+
         $this->setClient(new Client([
             'base_uri' => $this->getUrl()
         ]));
