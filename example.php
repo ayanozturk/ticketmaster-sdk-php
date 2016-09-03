@@ -8,5 +8,3 @@ $tmEvents = new TMEvent();
 $tmEvents->setKey('YOUR-KEY');
 
 $events = $tmEvents->findAll();
-
-var_dump($events);
