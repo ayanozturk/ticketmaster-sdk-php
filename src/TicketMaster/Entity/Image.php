@@ -1,6 +1,8 @@
 <?php
 namespace TicketMaster\Entity;
 
+use JMS\Serializer\Annotation\Type;
+
 /**
  * Class Image
  * @package TicketMaster\Entity
@@ -8,26 +10,31 @@ namespace TicketMaster\Entity;
 class Image
 {
     /**
+     * @Type("string")
      * @var string
      */
     private $url;
 
     /**
+     * @Type("string")
      * @var string
      */
     private $ratio;
 
     /**
+     * @Type("integer")
      * @var int
      */
     private $width;
 
     /**
+     * @Type("integer")
      * @var int
      */
     private $height;
 
     /**
+     * @Type("boolean")
      * @var bool
      */
     private $fallback;

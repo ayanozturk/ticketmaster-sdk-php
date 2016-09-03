@@ -1,6 +1,8 @@
 <?php
 namespace TicketMaster\Entity;
 
+use JMS\Serializer\Annotation\Type;
+
 /**
  * Class Event
  * @package TicketMaster\Entity
@@ -8,26 +10,31 @@ namespace TicketMaster\Entity;
 class Event
 {
     /**
+     * @Type("string")
      * @var string
      */
     protected $id;
 
     /**
+     * @Type("string")
      * @var string
      */
     protected $name;
 
     /**
+     * @Type("string")
      * @var string
      */
     protected $description;
 
     /**
+     * @Type("string")
      * @var string
      */
     protected $locale;
 
     /**
+     * @Type("string")
      * @var string
      */
     protected $url;
@@ -38,6 +45,7 @@ class Event
     protected $promoter;
 
     /**
+     * @Type("ArrayCollection<TicketMaster\Entity\Image>")
      * @var Image[]
      */
     protected $images;
@@ -48,16 +56,19 @@ class Event
     protected $classifications;
 
     /**
+     * @Type("Datetime")
      * @var \DateTime
      */
     protected $dates;
 
     /**
+     * @Type("boolean")
      * @var bool
      */
     protected $test;
 
     /**
+     * @Type("TicketMaster\Entity\Sale")
      * @var Sale
      */
     protected $sales;
