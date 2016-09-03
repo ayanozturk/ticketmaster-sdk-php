@@ -15,7 +15,7 @@ abstract class AbstractApi
     /**
      * @var string
      */
-    private static $url = 'https://app.ticketmaster.com/';
+    private $url = 'https://app.ticketmaster.com/';
 
     /**
      * @param string $key
@@ -36,17 +36,17 @@ abstract class AbstractApi
     /**
      * @param string $url
      */
-    public function setUrl(string $url)
+    protected function setUrl(string $url)
     {
-        self::$url = $url;
+        $this->url = $url;
     }
 
     /**
      * @return string
      */
-    public static function getUrl(): string
+    protected function getUrl(): string
     {
-        return self::$url;
+        return $this->url;
     }
 
 }
