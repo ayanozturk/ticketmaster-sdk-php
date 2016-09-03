@@ -1,0 +1,20 @@
+{
+  "name": "ayanozturk/ticketmaster-sdk-php",
+
+  "require": {
+    "php": ">=7.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  }
+}
