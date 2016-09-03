@@ -2,10 +2,10 @@
 namespace TicketMaster\Entity;
 
 /**
- * Class Market
+ * Class Dma
  * @package TicketMaster\Entity
  */
-class Market
+class Dma
 {
     /**
      * @var string
@@ -22,9 +22,9 @@ class Market
 
     /**
      * @param string $id
-     * @return Market
+     * @return Dma
      */
-    public function setId(string $id): Market
+    public function setId(string $id): Dma
     {
         $this->id = $id;
         return $this;
