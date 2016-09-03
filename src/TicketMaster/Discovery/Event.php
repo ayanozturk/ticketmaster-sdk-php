@@ -16,7 +16,13 @@ class Event extends Api\AbstractApi
      */
     public function findAll(): array
     {
-        // @TODO find and return all events
+        $response = $this->getClient()
+            ->get('discovery/v2/events.json?apikey='.$this->getKey());
+
+        $eventsJson = $response->getBody()->getContents();
+
+        // @TODO deserialise the json to entities here
+        return \GuzzleHttp\json_decode($eventsJson, true);
     }
 
 }
