@@ -1,5 +1,5 @@
 <?php
-namespace TicketMaster\Example;
+namespace Example;
 
 use TicketMaster\Discovery\Event as TMEvent;
 
