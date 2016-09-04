@@ -67,8 +67,6 @@ class Attraction
      * @var Source
      */
     private $source;
-    // @TODO: Map this after we know wthe the bloody hell is this.
-    // private Map<String, Extension> extensions = new HashMap<>();
 
     /**
      * @return string

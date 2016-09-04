@@ -82,9 +82,6 @@ class Venue
      */
     private $source;
 
-    // @TODO: add this later
-    //    private $extensions;
-
     /**
      * @return string
      */
