@@ -22,16 +22,16 @@ class Event extends Api\AbstractApi
             ->get('discovery/v2/events?apikey='. $this->getKey().'&size=2');
 
         $eventsJson = $response->getBody()->getContents();
-        $eventsResponseArray = json_decode($eventsJson, TRUE);
+        $eventsResponseArray = json_decode($eventsJson, true);
 
         $eventsArray = $eventsResponseArray['_embedded']['events'];
 
         $events = [];
-        $normalizer = new ObjectNormalizer(NULL);
+        $normalizer = new ObjectNormalizer(null);
         $serializer = new Serializer([$normalizer]);
 
         foreach ($eventsArray as $eventArray) {
-            $events[] = $serializer->denormalize($eventArray, 'TicketMaster\Entity\Event');
+            $events[] = $serializer->denormalize($eventArray, Entity\Event::class);
         }
 
         return $events;
