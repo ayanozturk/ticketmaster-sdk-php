@@ -1,8 +1,6 @@
 <?php
 namespace TicketMaster\Entity;
 
-use JMS\Serializer\Annotation\Type;
-
 /**
  * Class Image
  * @package TicketMaster\Entity

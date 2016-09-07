@@ -3,6 +3,8 @@ namespace TicketMaster\Discovery;
 
 use TicketMaster\Api;
 use TicketMaster\Entity;
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 /**
  * Class Event
@@ -17,19 +19,19 @@ class Event extends Api\AbstractApi
     public function findAll(): array
     {
         $response = $this->getClient()
-            ->get('discovery/v2/events?apikey='.$this->getKey().'&size=2');
+            ->get('discovery/v2/events?apikey='. $this->getKey().'&size=2');
 
         $eventsJson = $response->getBody()->getContents();
-        $eventsResponseArray = \GuzzleHttp\json_decode($eventsJson, true);
+        $eventsResponseArray = json_decode($eventsJson, true);
 
         $eventsArray = $eventsResponseArray['_embedded']['events'];
 
-        $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
-
         $events = [];
+        $normalizer = new ObjectNormalizer(null);
+        $serializer = new Serializer([$normalizer]);
 
         foreach ($eventsArray as $eventArray) {
-            $events[] = $serializer->fromArray($eventArray, \TicketMaster\Entity\Event::class);
+            $events[] = $serializer->denormalize($eventArray, Entity\Event::class);
         }
 
         return $events;

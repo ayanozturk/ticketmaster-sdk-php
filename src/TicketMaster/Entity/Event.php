@@ -1,7 +1,6 @@
 <?php
 namespace TicketMaster\Entity;
 
-use JMS\Serializer\Annotation\Type;
 
 /**
  * Class Event
@@ -56,8 +55,7 @@ class Event
     protected $classifications;
 
     /**
-     * @Type("Datetime")
-     * @var \DateTime
+     * @var array
      */
     protected $dates;
 
@@ -68,8 +66,7 @@ class Event
     protected $test;
 
     /**
-     * @Type("TicketMaster\Entity\Sale")
-     * @var Sale
+     * @var Sale[]
      */
     protected $sales;
 
@@ -248,18 +245,18 @@ class Event
     }
 
     /**
-     * @return \DateTime
+     * @return array
      */
-    public function getDates(): \DateTime
+    public function getDates(): array
     {
         return $this->dates;
     }
 
     /**
-     * @param \DateTime $dates
+     * @param array $dates
      * @return Event
      */
-    public function setDates(\DateTime $dates): Event
+    public function setDates(array $dates): Event
     {
         $this->dates = $dates;
         return $this;
@@ -284,18 +281,18 @@ class Event
     }
 
     /**
-     * @return Sale
+     * @return Sale[]
      */
-    public function getSales(): Sale
+    public function getSales(): array
     {
         return $this->sales;
     }
 
     /**
-     * @param Sale $sales
+     * @param Sale[] $sales
      * @return Event
      */
-    public function setSales(Sale $sales): Event
+    public function setSales(array $sales): Event
     {
         $this->sales = $sales;
         return $this;
