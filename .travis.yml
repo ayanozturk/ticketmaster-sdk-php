@@ -11,3 +11,11 @@ before_script:
   - composer install
 script:
   - phpdbg -qrr vendor/bin/phpunit
+
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#ticketmaster"
+    nick: tmtravisci
+    on_success: change
+    
