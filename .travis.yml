@@ -1,8 +1,10 @@
 language: php
-
 php:
   - 7.0
 
+cache:
+  directories:
+    - $HOME/.composer/cache
 git:
   depth: 3
 
@@ -18,4 +20,3 @@ notifications:
       - "chat.freenode.net#ticketmaster"
     nick: tmtravisci
     on_success: change
-    
