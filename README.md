@@ -1,7 +1,8 @@
 # Ticketmaster PHP SDK
 
-This library is in alpha state, use it under your own risk.
+This library is not working :)
 
 Required PHP extensions:
+- ext-json
 - ext-curl
 - ext-dom

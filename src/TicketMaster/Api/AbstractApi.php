@@ -1,11 +1,11 @@
 <?php
+
 namespace TicketMaster\Api;
 
 use GuzzleHttp\Client;
 
 /**
  * Class AbstractApi
- * @package TicketMaster\Api
  */
 abstract class AbstractApi
 {
@@ -79,5 +79,4 @@ abstract class AbstractApi
     {
         return $this->url;
     }
-
 }
